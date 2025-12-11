@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media Content Analysis Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <h1>Social Media Content Analysis Dashboard</h1>
+
+    <div class="dashboard-container">
+        
+        <div class="kpi-grid">
+            <div class="card kpi-card">
+                <div id="total-posts" class="kpi-value">0</div>
+                <div class="kpi-label">Total Posts</div>
+            </div>
+            <div class="card kpi-card">
+                <div id="misinfo-rate" class="kpi-value misinfo">0%</div>
+                <div class="kpi-label">Misinformation Rate</div>
+            </div>
+            <div class="card kpi-card">
+                <div id="avg-engagement" class="kpi-value engagement">0.00</div>
+                <div class="kpi-label">Avg. Engagement Score</div>
+            </div>
+            <div class="card kpi-card">
+                <div id="total-interactions" class="kpi-value">0</div>
+                <div class="kpi-label">Total Interactions</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Posts by Platform</h2>
+            <div class="chart-container">
+                <canvas id="platformChart"></canvas>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Misinformation by Category</h2>
+            <div class="chart-container">
+                <canvas id="misinfoCategoryChart"></canvas>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Moderation Actions</h2>
+            <div class="chart-container">
+                <canvas id="moderationChart"></canvas>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Political Leaning</h2>
+            <div class="chart-container">
+                <canvas id="politicalLeaningChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="card table-container">
+            <h2>Content Feed</h2>
+            <input type="text" id="searchInput" placeholder="Search content...">
+            <div style="overflow-x:auto;">
+                <table id="postsTable">
+                    <thead>
+                        <tr>
+                            <th>Platform</th>
+                            <th>Content</th>
+                            <th>Category</th>
+                            <th>Misinformation</th>
+                            <th>Engagement</th>
+                            <th>Toxicity</th>
+                            <th>Sentiment</th>
+                            <th>Political Leaning</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
